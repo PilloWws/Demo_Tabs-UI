@@ -15,7 +15,11 @@ tabs.forEach((tab, index) => {
         tabs.forEach((tab) => {
             tab.classList.remove('active');
         })
+        panes.forEach(pane => {
+            pane.classList.remove('active');
+        })
         this.classList.add('active');
+        panes[index].classList.add('active');
         const tabActive = $('.tab-item.active');
         const line = $('.tabs .line');
         line.style.left = tabActive.offsetLeft - 0 + 'px' ;
